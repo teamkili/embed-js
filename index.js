@@ -37,10 +37,20 @@ chat.setAttribute("id", "kili-bubble-window");
 chat.style.position = "fixed";
 chat.style.flexDirection = "column";
 chat.style.justifyContent = "space-between";
-chat.style.bottom = "80px";
-chat.style.right = "20px";
-chat.style.width = "400px";
-chat.style.height = "70vh";
+
+// Set the width of the chatbot based on the device screen size
+if (window.innerWidth <= 768) {
+  // Mobile screen
+  chat.style.width = "100vw";
+  chat.style.height = "100vh";
+} else {
+  // Desktop screen
+  chat.style.width = "400px";
+  chat.style.height = "500px";
+  chat.style.bottom = "80px";
+  chat.style.right = "20px";
+}
+
 chat.style.boxShadow =
   "rgba(150, 150, 150, 0.15) 0px 6px 24px 0px, rgba(150, 150, 150, 0.15) 0px 0px 0px 1px";
 chat.style.display = "none";
@@ -48,7 +58,7 @@ chat.style.borderRadius = "10px";
 chat.style.zIndex = 999999999;
 chat.style.overflow = "hidden";
 chat.style.margin = "10px";
-chat.style.overflow = "auto";
+chat.style.overflow = "hidden";
 
 document.body.appendChild(chat);
 chat.innerHTML = `<iframe
