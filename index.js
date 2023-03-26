@@ -13,7 +13,7 @@ button.style.bottom = "20px";
 button.style.right = "20px";
 button.style.padding = "0";
 button.setAttribute("id", "kili-bubble-button");
-button.style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2)";
+// button.style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2)";
 button.style.cursor = "pointer";
 button.style.zIndex = 999999999;
 button.style.transition = "all .2s ease-in-out";
