@@ -3,16 +3,13 @@
   function myWidgetFunction(props) {
     // Extract the props
     var slug = props.slug || "default value";
+    console.log(slug);
 
     const CHAT_BUTTON_SIZE = 50; // size of the chat button in pixels
     const CHAT_BUTTON_RADIUS = CHAT_BUTTON_SIZE / 2; // radius of the chat button in pixels
 
     // Create a button element
     const button = document.createElement("button");
-
-    // Get the script tag with the URL prop
-    const scriptTag = document.currentScript;
-    console.log(scriptTag);
 
     // Set the button styles
     button.style.position = "fixed";
