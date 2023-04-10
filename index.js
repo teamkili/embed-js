@@ -6,6 +6,7 @@ const button = document.createElement("button");
 
 // Get the script tag with the URL prop
 const scriptTag = document.currentScript;
+console.log(scriptTag);
 
 // Set the button styles
 button.style.position = "fixed";
