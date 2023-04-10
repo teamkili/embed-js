@@ -62,7 +62,7 @@ chat.style.overflow = "hidden";
 
 document.body.appendChild(chat);
 chat.innerHTML = `<iframe
-src=https://www.kili.so/widget/${scriptTag.id}"
+src="https://www.kili.so/widget/${scriptTag.id}"
 width="100%"
 height="100%"
 frameborder="0"
