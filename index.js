@@ -13,7 +13,6 @@ button.style.bottom = "20px";
 button.style.right = "20px";
 button.style.padding = "0";
 button.setAttribute("id", "kili-bubble-button");
-// button.style.boxShadow = "0 4px 8px 0 rgba(0, 0, 0, 0.2)";
 button.style.cursor = "pointer";
 button.style.zIndex = 999999999;
 button.style.transition = "all .2s ease-in-out";
@@ -62,7 +61,7 @@ chat.style.overflow = "hidden";
 
 document.body.appendChild(chat);
 chat.innerHTML = `<iframe
-src="https://www.kili.so/widget/kili"
+src=https://www.kili.so/widget//${scriptTag.id}"
 width="100%"
 height="100%"
 frameborder="0"
