@@ -41,18 +41,35 @@
     chat.style.flexDirection = "column";
     chat.style.justifyContent = "space-between";
 
-    // Set the width of the chatbot based on the device screen size
-    if (window.innerWidth <= 768) {
-      // Mobile screen
-      chat.style.width = "100vw";
-      chat.style.height = "100vh";
-    } else {
-      // Desktop screen
-      chat.style.width = "400px";
-      chat.style.height = "500px";
-      chat.style.bottom = "80px";
-      chat.style.right = "20px";
+    // Function to update the widget's dimensions based on the screen size
+    function updateWidgetDimensions(chat) {
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        const padding = "40px"; // Define the desired padding for small screens
+        // Mobile screen
+        chat.style.width = `calc(100vw - ${padding} * 2)`; // Subtract padding from both sides
+        chat.style.height = `calc(100vh - ${padding} * 6)`; // Subtract padding from top and bottom
+        chat.style.top = padding; // Top position
+        chat.style.left = padding; // Left position
+        chat.style.right = padding; // Right position
+        chat.style.bottom = padding; // Bottom position
+        chat.style.margin = "auto"; // Center the widget
+        chat.style.transform = "none"; // Reset the transform property
+      } else {
+        // Desktop screen
+        chat.style.width = "400px";
+        chat.style.height = "500px";
+        chat.style.bottom = "80px";
+        chat.style.right = "20px";
+      }
     }
+
+    // Update the widget's dimensions based on the initial screen size
+    updateWidgetDimensions(chat);
+
+    // Add an event listener for the window resize event
+    window.addEventListener("resize", () => {
+      updateWidgetDimensions(chat);
+    });
 
     chat.style.boxShadow =
       "rgba(150, 150, 150, 0.15) 0px 6px 24px 0px, rgba(150, 150, 150, 0.15) 0px 0px 0px 1px";
