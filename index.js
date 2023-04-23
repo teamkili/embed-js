@@ -3,7 +3,7 @@
   function myWidgetFunction(props) {
     // Extract the props
     var slug = props.slug || "default value";
-    console.log(slug);
+    var logo = props.logo || "https://www.kili.so/logo.png";
 
     const CHAT_BUTTON_SIZE = 50; // size of the chat button in pixels
     const CHAT_BUTTON_RADIUS = CHAT_BUTTON_SIZE / 2; // radius of the chat button in pixels
@@ -106,7 +106,7 @@
 
     // Add the image to the button
     const image = document.createElement("img");
-    image.src = "https://www.kili.so/logo.png";
+    image.src = logo;
     image.alt = "Button Image";
     image.style.width = CHAT_BUTTON_SIZE + "px";
     image.style.height = CHAT_BUTTON_SIZE + "px";
