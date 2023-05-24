@@ -76,9 +76,8 @@
     chat.style.display = "none";
     chat.style.borderRadius = "10px";
     chat.style.zIndex = 999999999;
-    chat.style.overflow = "hidden";
+    chat.style.overflow = "auto";
     chat.style.margin = "10px";
-    chat.style.overflow = "hidden";
 
     document.body.appendChild(chat);
     chat.innerHTML = `<iframe
