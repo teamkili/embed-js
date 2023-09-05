@@ -81,7 +81,7 @@
 
     document.body.appendChild(chat);
     chat.innerHTML = `<iframe
-    src="https://www.kili.so/widget/${slug}"
+    src="https://app.kili.so/widget/${slug}"
     width="100%"
     height="100%"
     frameborder="0"
