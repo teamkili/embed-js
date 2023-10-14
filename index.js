@@ -3,7 +3,7 @@
   function myWidgetFunction(props) {
     // Extract the props
     var slug = props.slug || "default value";
-    var logo = props.logo || "https://www.kili.so/logo.png";
+    var logo = props.logo || "https://app.kili.so/logo.png";
 
     const CHAT_BUTTON_SIZE = 50; // size of the chat button in pixels
     const CHAT_BUTTON_RADIUS = CHAT_BUTTON_SIZE / 2; // radius of the chat button in pixels
@@ -56,8 +56,8 @@
         chat.style.transform = "none"; // Reset the transform property
       } else {
         // Desktop screen
-        chat.style.width = "400px";
-        chat.style.height = "500px";
+        chat.style.width = "375px";
+        chat.style.height = "550px";
         chat.style.bottom = "80px";
         chat.style.right = "20px";
       }
